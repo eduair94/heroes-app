@@ -60,7 +60,7 @@ describe("Tests in <SearchPage/>", () => {
       </MemoryRouter>,
     );
     const input = screen.getByRole("textbox") as HTMLInputElement;
-    const form = screen.getByLabelText("form-herouu");
+    const form = screen.getByLabelText("form-hero");
     fireEvent.input(input, {
       target: { name: "searchText", value: searchText },
     });

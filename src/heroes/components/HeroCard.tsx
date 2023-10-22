@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+const baseUrl = import.meta.env.BASE_URL;
 
 type HeroCardProps = {
   id: string;
@@ -25,7 +26,7 @@ export const HeroCard = ({
   first_appearance,
   characters,
 }: HeroCardProps) => {
-  const heroImage = `/assets/heroes/${id}.jpg`;
+  const heroImage = `${baseUrl}/assets/heroes/${id}.jpg`;
   return (
     <div className="col animate__animated animate__fadeIn">
       <div className="card">

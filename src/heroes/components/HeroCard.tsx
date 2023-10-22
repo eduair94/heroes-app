@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const baseUrl = import.meta.env.BASE_URL;
+import { baseUrl } from "../../helpers";
 
 type HeroCardProps = {
   id: string;

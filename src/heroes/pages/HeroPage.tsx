@@ -1,7 +1,7 @@
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getHeroById } from "../helpers";
 import { useMemo } from "react";
-const baseUrl = import.meta.env.BASE_URL;
+import { baseUrl } from "../../helpers";
 
 export const HeroPage = () => {
   const { id } = useParams();

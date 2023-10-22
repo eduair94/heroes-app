@@ -14,7 +14,7 @@ export interface AuthReducerInterface {
     user?: UserPayloadI | null
 }
 
-export const authReducer = (state: AuthReducerInterface = {}, action: {type: string, payload?: PayloadI}): AuthReducerInterface => {
+export const authReducer = (state: AuthReducerInterface = {}, action: {type?: string, payload?: PayloadI}): AuthReducerInterface => {
     switch (action.type) {
         case types.login:
             return {
@@ -24,7 +24,6 @@ export const authReducer = (state: AuthReducerInterface = {}, action: {type: str
         case types.logout:
         return {
             logged: false,
-            user: null
         }
         default:
             return state;

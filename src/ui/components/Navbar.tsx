@@ -52,7 +52,11 @@ export const Navbar = () => {
         <ul className="navbar-nav ml-auto ">
           <span className="nav-item nav-link text-primary">{user?.name}</span>
 
-          <button onClick={onLogout} className="nav-item nav-link btn">
+          <button
+            aria-label="logout"
+            onClick={onLogout}
+            className="nav-item nav-link btn"
+          >
             Logout
           </button>
         </ul>

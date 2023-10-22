@@ -1,18 +1,31 @@
 import { Link } from "react-router-dom";
 
-const CharactersByHero = ({ alter_ego, characters }) => {
+type HeroCardProps = {
+  id: string;
+  superhero: string;
+  alter_ego: string;
+  first_appearance: string;
+  characters: string;
+};
+
+type CharactersByHeroProps = {
+  alter_ego: string;
+  characters: string;
+};
+
+const CharactersByHero = ({ alter_ego, characters }: CharactersByHeroProps) => {
   return alter_ego !== characters ? <p>{characters}</p> : <></>;
 };
 
 export const HeroCard = ({
   id,
   superhero,
-  publisher,
+  //publisher,
   alter_ego,
   first_appearance,
   characters,
-}) => {
-  const heroImage = `./assets/heroes/${id}.jpg`;
+}: HeroCardProps) => {
+  const heroImage = `/assets/heroes/${id}.jpg`;
   return (
     <div className="col animate__animated animate__fadeIn">
       <div className="card">

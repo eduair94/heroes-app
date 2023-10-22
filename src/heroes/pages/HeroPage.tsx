@@ -6,6 +6,8 @@ import { baseUrl } from "../../helpers";
 export const HeroPage = () => {
   const { id } = useParams();
 
+  console.log("Hero ID", id);
+
   const hero = useMemo(() => getHeroById(id as string), [id]);
 
   const navigate = useNavigate();
@@ -43,7 +45,11 @@ export const HeroPage = () => {
         <h5 className="mt-3">Characters</h5>
         <p>{hero.characters}</p>
 
-        <button onClick={onNavigateBack} className="btn btn-outline-primary">
+        <button
+          aria-label="back-btn"
+          onClick={onNavigateBack}
+          className="btn btn-outline-primary"
+        >
           Back
         </button>
       </div>
